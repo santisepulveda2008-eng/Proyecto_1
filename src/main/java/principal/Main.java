@@ -48,6 +48,16 @@ public class Main {
                     }
                 break;
                 }
+                case 4: {
+                    String nombre = vista.leerTexto("Nombre del competidor: ");
+                    int posicion = controlador.posicionGlobal(nombre);
+                    if (posicion > 0) {
+                        vista.mostrar("Posición global: " + posicion);
+                    } else {
+                        vista.mostrar("Competidor no encontrado.");
+                    }
+                    break;
+                }
                 case 0:
                     vista.mostrar("Hasta luego.");
                     break;
