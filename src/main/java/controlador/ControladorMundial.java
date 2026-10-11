@@ -26,4 +26,21 @@ public class ControladorMundial {
         copia.sort(Comparator.comparingInt(Competidor::getRanking).reversed());
         return copia;
     }
+        public Competidor buscarPorNombre(String nombre) {
+        for (Competidor c : competidores) {
+            if (c.getNombre().equalsIgnoreCase(nombre)) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public boolean actualizarRanking(String nombre, int puntos, boolean ganoMedalla) {
+        Competidor c = buscarPorNombre(nombre);
+        if (c == null) {
+            return false;
+        }
+        c.actualizarRanking(puntos, ganoMedalla);
+        return true;
+    }
 }
