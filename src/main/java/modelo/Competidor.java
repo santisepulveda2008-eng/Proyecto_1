@@ -38,4 +38,30 @@ public class Competidor extends Atleta {
         return super.toString() + " | Ranking: " + ranking + " pts | Estatura: " + estatura
                 + " m | Peso: " + peso + " kg";
     }
+        public void actualizarRanking(int puntosObtenidos) {
+        if (puntosObtenidos > 0) {
+            ranking += puntosObtenidos;
+        }
+    }
+
+    public void actualizarRanking(int puntosObtenidos, boolean ganoMedalla) {
+        if (puntosObtenidos <= 0) {
+            return;
+        }
+        int bonificacion;
+        if (ganoMedalla) {
+            if (puntosObtenidos >= 50) {
+                bonificacion = 20;
+            } else {
+                bonificacion = 10;
+            }
+        } else {
+            if (puntosObtenidos >= 50) {
+                bonificacion = 5;
+            } else {
+                bonificacion = 0;
+            }
+        }
+        ranking += puntosObtenidos + bonificacion;
+    }
 }
