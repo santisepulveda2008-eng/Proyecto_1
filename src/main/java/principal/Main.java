@@ -36,6 +36,18 @@ public class Main {
                 case 2:
                     vista.mostrarLista(controlador.clasificacion());
                     break;
+                
+                case 3: {
+                    String nombre = vista.leerTexto("Nombre del competidor: ");
+                    int puntos = vista.leerEntero("Puntos obtenidos: ");
+                    boolean medalla = vista.leerSiNo("¿Ganó medalla?");
+                    if (controlador.actualizarRanking(nombre, puntos, medalla)) {
+                        vista.mostrar("Ranking actualizado.");
+                    } else {
+                        vista.mostrar("Competidor no encontrado.");
+                    }
+                break;
+                }
                 case 0:
                     vista.mostrar("Hasta luego.");
                     break;
