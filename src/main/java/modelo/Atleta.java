@@ -34,6 +34,6 @@ public class Atleta {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + " | Edad: " + edad + " | País: " + pais;
+        return "Nombre: " + nombre + " | Edad: " + edad + " | Pais: " + pais;
     }
 }
