@@ -20,6 +20,7 @@ public class VistaMundial {
         System.out.println("\n=== MUNDIAL DE CICLISMO DE PISTA - CALI ===");
         System.out.println("1. Registrar competidor");
         System.out.println("2. Ver clasificación");
+        System.out.println("3. Actualizar ranking");
         System.out.println("0. Salir");
         return leerEntero("Opción: ");
     }
@@ -63,5 +64,8 @@ public class VistaMundial {
             mostrar(numero + ". " + c);
             numero++;
         }
+    }
+        public boolean leerSiNo(String mensaje) {
+        return leerTexto(mensaje + " (s/n): ").equalsIgnoreCase("s");
     }
 }
