@@ -25,7 +25,7 @@ public class Main {
                 case 1: {
                     String nombre = vista.leerTexto("Nombre: ");
                     int edad = vista.leerEntero("Edad: ");
-                    String pais = vista.leerTexto("País: ");
+                    String pais = vista.leerTexto("Pais: ");
                     int ranking = vista.leerEntero("Ranking inicial (puntos): ");
                     double estatura = vista.leerDecimal("Estatura (m): ");
                     double peso = vista.leerDecimal("Peso (kg): ");
@@ -40,7 +40,7 @@ public class Main {
                 case 3: {
                     String nombre = vista.leerTexto("Nombre del competidor: ");
                     int puntos = vista.leerEntero("Puntos obtenidos: ");
-                    boolean medalla = vista.leerSiNo("¿Ganó medalla?");
+                    boolean medalla = vista.leerSiNo("¿Gano medalla?");
                     if (controlador.actualizarRanking(nombre, puntos, medalla)) {
                         vista.mostrar("Ranking actualizado.");
                     } else {
@@ -52,7 +52,7 @@ public class Main {
                     String nombre = vista.leerTexto("Nombre del competidor: ");
                     int posicion = controlador.posicionGlobal(nombre);
                     if (posicion > 0) {
-                        vista.mostrar("Posición global: " + posicion);
+                        vista.mostrar("Posicion global: " + posicion);
                     } else {
                         vista.mostrar("Competidor no encontrado.");
                     }
@@ -62,7 +62,7 @@ public class Main {
                     vista.mostrar("Hasta luego.");
                     break;
                 default:
-                    vista.mostrar("Opción inválida.");
+                    vista.mostrar("Opcion invalida.");
             }
         } while (opcion != 0);
     }
